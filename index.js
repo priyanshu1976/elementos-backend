@@ -9,8 +9,12 @@ const PORT = 5000;
 app.use(express.json());
 app.use(cors());
 
-app;
-
+app.post("/", (req, res) => {
+  console.log("endpoit hit");
+  res.json({
+    message: "hello",
+  });
+});
 app.post("/api/token", (req, res) => {
   try {
     const { email } = req.body;
@@ -30,4 +34,6 @@ app.post("/api/token", (req, res) => {
   }
 });
 
-module.exports = app;
+app.listen(PORT, () => {
+  console.log("app lising on port ");
+});
