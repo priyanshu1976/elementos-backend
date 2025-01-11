@@ -1,11 +1,13 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 
 const app = express();
 const PORT = 5000;
 
 // Middleware to parse JSON
 app.use(express.json());
+app.use(cors());
 
 app.post("/token", (req, res) => {
   try {
