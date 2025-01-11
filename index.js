@@ -9,6 +9,8 @@ const PORT = 5000;
 app.use(express.json());
 app.use(cors());
 
+app;
+
 app.post("/token", (req, res) => {
   try {
     const { email } = req.body;
