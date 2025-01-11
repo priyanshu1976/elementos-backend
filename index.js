@@ -11,7 +11,7 @@ app.use(cors());
 
 app;
 
-app.post("/token", (req, res) => {
+app.post("/api/token", (req, res) => {
   try {
     const { email } = req.body;
 
